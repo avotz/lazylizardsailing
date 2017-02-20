@@ -65,7 +65,15 @@ var $btnMenu = $('#btn-menu'),
 
        
     });
+    $form_request = $('.request-popup form');
 
+      $('.btn-reserve').on('click', function(){
+          
+          
+          //$form_transfer.find('select[name="destination"] option[value="'+ $(this).data('title') +'"]').attr("selected",'selected');
+          $form_request.find('select[name="selecttour"]').val($('h1.product_title').text());
+
+      });
  // FUNCTION FOR includes
 
     var btnIncludes = $('.product-description-accordion-button');

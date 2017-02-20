@@ -688,7 +688,9 @@ body.mfp-zoom-out-cur .main,
 body.mfp-open .footer,
 body.mfp-zoom-out-cur .footer,
 body.mfp-open .banner,
-body.mfp-zoom-out-cur .banner {
+body.mfp-zoom-out-cur .banner,
+body.mfp-open #container,
+body.mfp-zoom-out-cur #container {
   filter: blur(5px);
   -webkit-filter: blur(5px);
 }
@@ -750,6 +752,7 @@ iframe {
   display: none;
 }
 .wpcf7-submit,
+.btn-reserve,
 .btn {
   padding: 0.5rem 0.8rem;
   display: inline-block;
@@ -766,6 +769,7 @@ iframe {
   border: none;
 }
 .wpcf7-submit:hover,
+.btn-reserve:hover,
 .btn:hover {
   background-color: #549e51;
   border-color: #d6d6d6;
@@ -774,10 +778,16 @@ iframe {
   color: #fff;
 }
 .wpcf7-submit,
+.btn-reserve,
 .btn-azul {
   background-color: #4570b2;
   border-color: #4570b2;
   color: #fff;
+}
+.btn-reserve {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-top: -10px;
 }
 .right {
   right: 0;
