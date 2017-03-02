@@ -55,7 +55,7 @@ get_header(); ?>
                             <div class="nano-content">
 
                                 <?php rewind_posts(); ?>
-                                <?php query_posts( 'post_type=product' ); ?>
+                                <?php query_posts( 'post_type=product&order=ASC' ); ?>
                                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                                         
                                             <article class="intro__featured__item">
