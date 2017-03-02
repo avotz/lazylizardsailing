@@ -31,7 +31,7 @@
                     <a href="https://www.tripadvisor.com.mx/Attraction_Review-g309244-d1451672-Reviews-Lazy_Lizard_Sailing_Day_Trips-Playa_Flamingo_Province_of_Guanacaste.html" class="header__top__info__link" target="_blank"><i class="icon-tripadvisor"></i> <span>tripAdvisor</span></a>
                     <a href="#request-popup" class="header__top__info__link request-popup-link"><i class="icon-email"></i> <span>Request</span></a>
                     <a href="tel:8833-8942" class="header__top__info__link"><i class="icon-ring_volume"></i> <span>+(506) 2654-5900</span></a>
-                    <a href="tel:1-800-753-1248" class="header__top__info__link"><span style="font-size: 1.5rem;">Toll Free</span> <span>1-800-753-1248</span></a>
+                    <a href="tel:1-800-753-1248" class="header__top__info__link"><span style="font-size: 1.5rem;">Toll Free</span> <span><b>1-800-753-1248</b></span></a>
                     
                 </div>
                 
