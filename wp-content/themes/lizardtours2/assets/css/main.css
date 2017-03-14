@@ -1110,6 +1110,7 @@ iframe {
 .intro__banner {
   width: 100%;
   position: relative;
+  display: none;
 }
 .intro__banner img {
   position: relative;
@@ -1222,13 +1223,13 @@ iframe {
 .intro__featured__item__title {
   position: absolute;
   right: 0;
-  bottom: 1rem;
-  background: rgba(0,0,0,0.65);
+  bottom: 0;
   color: #fff;
   z-index: 2;
   padding: 0.5rem;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 .intro__featured__item__link {
   position: absolute;
@@ -1239,6 +1240,11 @@ iframe {
   width: 100%;
   height: 100%;
   z-index: 2;
+}
+@media screen and (min-width: 640px) {
+  .intro__banner {
+    display: block;
+  }
 }
 @media screen and (min-width: 900px) {
   .intro {
