@@ -1229,12 +1229,15 @@ iframe {
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
   display: block;
+  height: 100%;
 }
 .intro__featured__item__title {
   position: absolute;
   right: 0;
   bottom: 0;
-  color: #fff;
+  color: #4570b2;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: #fff;
   z-index: 2;
   padding: 0.5rem;
   font-size: 25px;
