@@ -32,4 +32,4 @@ global $product;
 	<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
 	
 </div>
-<a href="#request-popup" class="request-popup-link btn-reserve"> Reserve Now</a>
+<!-- <a href="#request-popup" class="request-popup-link btn-reserve"> Reserve Now</a> -->
