@@ -240,14 +240,14 @@ function my_custom_checkout_field( $checkout ) {
         'required'  => true,
         ), $checkout->get_value( 'tour_pickup_hotel' ));
 
-     woocommerce_form_field( 'tour_date', array(
+     /*woocommerce_form_field( 'tour_date', array(
         'type'          => 'text',
         'class'         => array('my-field-class form-row-wide'),
         'label'         => __('Tour date'),
         'placeholder'   => __('dd/mm/yyyy'),
         'required'  => true,
         'input_class' => array('datepicker')
-        ), $checkout->get_value( 'tour_date' ));
+        ), $checkout->get_value( 'tour_date' ));*/
 
     echo '</div>';
 
@@ -262,8 +262,8 @@ function my_custom_checkout_field_process() {
     if ( ! $_POST['tour_pickup_hotel'] )
         wc_add_notice( __( '<strong>Pick up hotel</strong> is a required field.' ), 'error' );
 
-     if ( ! $_POST['tour_date'] )
-        wc_add_notice( __( '<strong>Tour date</strong> is a required field.' ), 'error' );
+     /*if ( ! $_POST['tour_date'] )
+        wc_add_notice( __( '<strong>Tour date</strong> is a required field.' ), 'error' );*/
 }
 
 /**
@@ -275,9 +275,9 @@ function my_custom_checkout_field_update_order_meta( $order_id ) {
     if ( ! empty( $_POST['tour_pickup_hotel'] ) ) {
         update_post_meta( $order_id, 'Pick up hotel', sanitize_text_field( $_POST['tour_pickup_hotel'] ) );
     }
-     if ( ! empty( $_POST['tour_date'] ) ) {
+    /* if ( ! empty( $_POST['tour_date'] ) ) {
         update_post_meta( $order_id, 'Tour date', sanitize_text_field( $_POST['tour_date'] ) );
-    }
+    }*/
 }
 
 /**
@@ -287,13 +287,21 @@ add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_che
 
 function my_custom_checkout_field_display_admin_order_meta($order){
     echo '<p><strong>'.__('Pick up hotel').':</strong> ' . get_post_meta( $order->id, 'Pick up hotel', true ) . '</p>';
-    echo '<p><strong>'.__('Tour date').':</strong> ' . get_post_meta( $order->id, 'Tour date', true ) . '</p>';
+    //echo '<p><strong>'.__('Tour date').':</strong> ' . get_post_meta( $order->id, 'Tour date', true ) . '</p>';
 }
 
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
+
+/*function manage_available_gateways( $gateways ) {
+		unset($gateways['wc-booking-gateway']);
+		return $gateways;
+	}
+
+add_filter( 'woocommerce_available_payment_gateways', 'manage_available_gateways' );*/
+
 /**
  * Implement the Custom Header feature.
  */
