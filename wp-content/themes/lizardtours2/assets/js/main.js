@@ -124,7 +124,7 @@ var $btnMenu = $('#btn-menu'),
           
           $.ajax({
                 type: 'GET',
-                url: '/lazylizardsailing/api/get_posts/?post_type=product&count=-1',//'/lazylizardsailing/api/taxonomy/get_taxonomy_posts/?taxonomy=tour_category&slug='+ selectedCategory,//'/api/get_posts/?post_type=tour&count=-1',
+                url: '/api/get_posts/?post_type=product&count=-1',//'/lazylizardsailing/api/taxonomy/get_taxonomy_posts/?taxonomy=tour_category&slug='+ selectedCategory,//'/api/get_posts/?post_type=tour&count=-1',
                 
                 success: function(data){
                    //console.log(data)
@@ -159,7 +159,7 @@ var $btnMenu = $('#btn-menu'),
           
           $.ajax({
                 type: 'GET',
-                url: '/lazylizardsailing/api/get_posts/?post_type=product&count=-1',
+                url: '/api/get_posts/?post_type=product&count=-1',
                 
                 success: function(data){
                    //console.log(data)
