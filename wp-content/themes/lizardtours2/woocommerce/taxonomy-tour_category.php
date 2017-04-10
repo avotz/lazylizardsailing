@@ -62,10 +62,13 @@ $categorySelected = get_terms( array(
 											<div class="tour-category-item-prices">
 											  
 											  
+											  
 													 
 											  <?php
 											  	/*$product = new WC_Product( $post->ID );*/?>
-											   <?php $product = new WC_Product( $post->ID ); 
+											  
+												
+												    <?php $product = new WC_Product( $post->ID ); 
 												    	/*echo $product->get_price_html();*/
 												    	
 												    woocommerce_template_loop_price(); 
@@ -81,7 +84,10 @@ $categorySelected = get_terms( array(
 
 												    <?php endif ?>
 													
-													<?php /*echo $product->get_price_html(); */?>     
+													<?php /*echo $product->get_price_html(); */?>
+													
+												
+												<?php woocommerce_template_loop_add_to_cart(); ?>     
 												<?php 
 													$product = new WC_Product( $post->ID );
 													echo apply_filters( 'woocommerce_loop_add_to_cart_link',

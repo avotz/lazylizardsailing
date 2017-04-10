@@ -45,8 +45,7 @@ get_header('shop'); ?>
 											</div>
 											<div class="tour-category-item-prices">
 											  
-											  
-													 
+											  		 
 											  <?php
 											  	/*$product = new WC_Product( $post->ID );*/?>
 											  
@@ -69,7 +68,7 @@ get_header('shop'); ?>
 												    <?php endif ?>
 													
 													<?php /*echo $product->get_price_html(); */?>
-												
+
 												<?php woocommerce_template_loop_add_to_cart(); ?>     
 												<?php 
 													$product = new WC_Product( $post->ID );
