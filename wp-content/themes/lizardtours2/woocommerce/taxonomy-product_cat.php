@@ -1,15 +1,25 @@
 <?php
 /**
- * Tour category template.
+ * The Template for displaying products in a product category. Simply includes the archive template
  *
- * @author    Themedelight
- * @package   Themedelight/AdventureTours
- * @version   1.0.0
+ * This template can be overridden by copying it to yourtheme/woocommerce/taxonomy-product_cat.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
+ * @package 	WooCommerce/Templates
+ * @version     1.6.4
  */
 
-//lizardtours_render_template_part( 'template-parts/content-tours' );
-//get_template_part( 'template-parts/content', 'tours' );
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
+//wc_get_template( 'archive-product.php' );
 get_header(); 
  $categories = get_terms( array(
             'taxonomy' => 'tour_category',
@@ -139,4 +149,5 @@ $categorySelected = get_terms( array(
 <?php
 /*get_sidebar();*/
 get_footer();
+
 
