@@ -71,7 +71,7 @@ $categorySelected = get_terms( array(
 												    <?php $product = new WC_Product( $post->ID ); 
 												    	/*echo $product->get_price_html();*/
 												    	
-												    woocommerce_template_loop_price(); 
+												   // woocommerce_template_loop_price(); 
 												    $custom_price_label = get_post_meta( get_the_ID(), 'custom_price_label', true );
 													$custom_price_individual = get_post_meta( get_the_ID(), 'custom_price_individual', true );
 												    ?>
