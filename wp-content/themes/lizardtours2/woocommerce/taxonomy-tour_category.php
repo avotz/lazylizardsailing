@@ -65,14 +65,23 @@ $categorySelected = get_terms( array(
 													 
 											  <?php
 											  	/*$product = new WC_Product( $post->ID );*/?>
-											  
-												
-												    <?php woocommerce_template_loop_price(); ?>
+											   <?php $product = new WC_Product( $post->ID ); 
+												    	/*echo $product->get_price_html();*/
+												    	
+												    woocommerce_template_loop_price(); 
+												    $custom_price_label = get_post_meta( get_the_ID(), 'custom_price_label', true );
+													$custom_price_individual = get_post_meta( get_the_ID(), 'custom_price_individual', true );
+												    ?>
+													 
+													<?php if($custom_price_label == '') :?>
+														<div class="per-person">per adult</div>
+													
+													<?php else: ?>
+													<div class="per-person"><?php echo $custom_price_label ?><br><?php echo $custom_price_individual ?></div>
 
-													<?php /*echo $product->get_price_html(); */?>
-													<div class="per-person">per person</div>
-												
-												<?php /*woocommerce_template_loop_add_to_cart();*/ ?>     
+												    <?php endif ?>
+													
+													<?php /*echo $product->get_price_html(); */?>     
 												<?php 
 													$product = new WC_Product( $post->ID );
 													echo apply_filters( 'woocommerce_loop_add_to_cart_link',
