@@ -22,15 +22,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 //wc_get_template( 'archive-product.php' );
 get_header(); 
  $categories = get_terms( array(
-            'taxonomy' => 'tour_category',
+            'taxonomy' => 'product_cat',
             'hide_empty' => false
             
         ) );
 
 $categorySelected = get_terms( array(
-            'taxonomy' => 'tour_category',
+            'taxonomy' => 'product_cat',
             'hide_empty' => false,
-            'slug' => get_query_var('tour_category')
+            'slug' => get_query_var('product_cat')
             
         ) );
 
