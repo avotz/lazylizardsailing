@@ -1496,12 +1496,12 @@ iframe {
     float: left;
     margin-right: 1px;
     overflow: hidden;
-    height: 615px;
+    height: 700px;
   }
   .contact__form {
     width: 29.6%;
     float: right;
-    height: 615px;
+    height: 700px;
   }
   .tour-category-items {
     width: 70% !important;
